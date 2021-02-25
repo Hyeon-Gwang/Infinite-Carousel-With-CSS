@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Carousel with CSS</title>
+    
+    <style>
+        .slider{border: 2px solid #2d2d2d; overflow: hidden;}
+        .slide-box{display: flex; width: calc(300px * 16); animation: slide 20s linear infinite;}
+        .slide-item{width: 300px; height: 100px; background-color: #2d2d2d; border: 2px solid #68c7df; box-sizing: border-box; font-size: 24px; color: #68c7df; line-height: 100px; text-align: center;}
+
+        @keyframes slide{
+            0%{transform: translateX(0)}
+            100%{transform: translateX(calc(-300px * 8));}
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slide-box">
+            <div class="slide-item">item1</div>
+            <div class="slide-item">item2</div>
+            <div class="slide-item">item3</div>
+            <div class="slide-item">item4</div>
+            <div class="slide-item">item5</div>
+            <div class="slide-item">item6</div>
+            <div class="slide-item">item7</div>
+            <div class="slide-item">item8</div>
+
+            <!-- same items -->
+            <div class="slide-item">item1</div>
+            <div class="slide-item">item2</div>
+            <div class="slide-item">item3</div>
+            <div class="slide-item">item4</div>
+            <div class="slide-item">item5</div>
+            <div class="slide-item">item6</div>
+            <div class="slide-item">item7</div>
+            <div class="slide-item">item8</div>
+        </div>
+    </div>
+
+
+</body>
+</html>
